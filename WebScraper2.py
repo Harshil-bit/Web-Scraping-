@@ -28,9 +28,9 @@ def scrape():
     for i in range(0,428):
         soup=BeautifulSoup(browser.page_source,"html.parser")
         for ul_tag in soup.find_all("ul",attrs={"class","exoplanet"}):
-            li_tags=ul_tag.find_all("li")
+            tr_tags=tdag.find_all("li")
             temp_list=[]
-            for index,li_tag in enumerate(li_tags):
+            for index,trag in enumerate(li_tags):
                 if index==0:
                     temp_list.append(li_tag.find_all("a")[0].contents[0])
                 else:
